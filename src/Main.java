@@ -1,13 +1,29 @@
 public class Main {
+    private static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        choiceSelection();
+    }
 
-        System.out.println("Hello, and welcome");
-
-        for (int i = 1; i <= 10; i++) {
-
-            System.out.printf("%d", i);
-
+    private static void choiceSelection() {
+        int choice = 0;
+        while (true) {
+            System.out.println("""
+                    Hello which option would you like to select?
+                    \t1. Distance Converter
+                    \t2. Weight Converter
+                    \t3. Money Converter
+                    """);
+            choice = scan.nextInt();
+            scan.nextLine();
+                if (choice >= 3 || choice <= 1) {
+                System.out.println("Please choose from the listed options");
+                }
         }
+
+    }
+
+    private static void weightConverter() {
+
     }
 }
